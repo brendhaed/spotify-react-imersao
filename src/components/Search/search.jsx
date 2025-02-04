@@ -29,13 +29,14 @@ const Search = () => {
         );
         setArtists(filteredArtists);
         setIsLoading(false);
+        
     };
 
     useEffect(() => {
         if (query.trim() !== '') {
             requestApi(query);
         } else {
-            setArtists([]);
+            setArtists([]); // Limpa resultados quando o input está vazio
         }
     }, [query]);
 
@@ -52,13 +53,13 @@ const Search = () => {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
             />
-
+            
             {isLoading && <p>Carregando...</p>}
             {error && <p>{error}</p>}
 
-            <div className="grid-container">
-                {/* Condição para exibir "Nada encontrado" ou os artistas */}
-                {query.trim() !== "" && artists.length === 0 ? (
+            {/* Lógica para esconder o container */}
+            <div className={`grid-container ${query.trim() === '' ? 'hidden' : ''}`}>
+                {query.trim() !== '' && artists.length === 0 ? (
                     <p>Nada encontrado!</p>
                 ) : (
                     artists.map((artist, index) => (
@@ -82,4 +83,3 @@ const Search = () => {
 };
 
 export default Search;
-
