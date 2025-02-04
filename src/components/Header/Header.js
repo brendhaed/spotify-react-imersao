@@ -2,7 +2,8 @@ import React from 'react';
 import './Header.css';
 import smallRight from '../../assets/icons/icons/small-right.png';
 import smallLeft from '../../assets/icons/icons/small-left.png';
-import search from '../../assets/icons/icons/search.png';
+import Search from '../Search/search';
+
 
 const Header = () => {
     return (
@@ -15,17 +16,7 @@ const Header = () => {
                     <img src={smallRight} alt="Seta direita" />
                 </button>
             </div>
-            <div className="header__search">
-                <img src={search} alt="Buscar"/>
-                <input 
-                    id="search-input" 
-                    maxLength="800" 
-                    autoCorrect="off" 
-                    autoCapitalize="off" 
-                    spellCheck="false"
-                    placeholder="O que você quer ouvir?"
-                />
-            </div>
+            <Search/>
             <div className="header__login">
                 <button className="subscribe">Inscreva-se</button>
                 <button className="login">Entrar</button>
