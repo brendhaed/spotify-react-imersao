@@ -1,6 +1,6 @@
 # 🎵 Projeto React - Página Inicial do Spotify
 
-Este projeto foi desenvolvido em **React** durante a **Imersão Front-End da Alura**. O objetivo foi recriar a interface da página inicial do Spotify, focando em boas práticas de desenvolvimento e componentização.
+Este projeto foi desenvolvido em **React** durante a **Imersão Front-End da Alura**. O objetivo foi recriar a interface da página inicial do Spotify, focando em aprendizado, boas práticas de desenvolvimento e componentização.
 
 ## 🚀 O que foi feito
 
